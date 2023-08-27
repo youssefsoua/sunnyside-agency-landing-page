@@ -14,21 +14,21 @@ export const Footer = () => {
         className="mb-4 mt-8 h-8 w-40"
       />
       <div className="flex w-[300px] justify-between py-6 text-dark-moderate-cyan">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
+        <a href="#About">About</a>
+        <a href="#Services">Services</a>
+        <a href="#Projects">Projects</a>
       </div>
       <div className="flex w-[165px] justify-between py-16 text-dark-desaturated-cyan">
-        <a href="#">
+        <a href="#facebook">
           <FaSquareFacebook />
         </a>
-        <a href="#">
+        <a href="#instagram">
           <FaInstagram />
         </a>
-        <a href="#">
+        <a href="#twitter">
           <FaTwitter />
         </a>
-        <a href="#">
+        <a href="#pinterest">
           <FaPinterest />
         </a>
       </div>
