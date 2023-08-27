@@ -1,15 +1,15 @@
-# Frontend Mentor - Order summary component solution
+# Frontend Mentor - Sunnyside agency landing page solution
 
-This is a solution to the [Order summary component](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj).
+This is a solution to the [Sunnyside agency landing page](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef).
 
 ## Screenshot
 
-![](https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_900/Screenshots/purqu7hymmvz8qfa7xlc.jpg)
+![](./screenshot.png)
 
 ## Links
 
-- Solution URL: [here](https://www.frontendmentor.io/solutions/order-summary-component-Y3-djDaMEX)
-- Live Site URL: [here](https://order-summary-component-kappa-five.vercel.app/)
+- Solution URL: [here](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-FxcYvMh3iF)
+- Live Site URL: [here](https://sunnyside-agency-landing-page-inky.vercel.app/)
 
 ## Built with
 
