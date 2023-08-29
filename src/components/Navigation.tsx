@@ -1,5 +1,18 @@
+import { Variants, motion } from "framer-motion";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+
+const variant: Variants = {
+  hidden: {
+    y: "-100vh",
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 3,
+    },
+  },
+};
 
 export const Navigation = () => {
   const [isMenuDisplayed, setIsMenuDisplayed] = useState(false);
@@ -9,7 +22,12 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed flex w-full items-center justify-between bg-navbar-blue px-6 py-8 lg:px-10">
+    <motion.nav
+      variants={variant}
+      animate="visible"
+      initial="hidden"
+      className="fixed z-10 flex w-full items-center justify-between bg-navbar-blue px-6 py-8 lg:px-10"
+    >
       <a href="/">
         <img src="./logo.svg" alt="SunnySide" className="h-8 w-40" />
       </a>
@@ -49,10 +67,16 @@ export const Navigation = () => {
         <li>
           <a href="#projects">Projects</a>
         </li>
-        <li className="rounded-full bg-white px-8 py-4 font-serif text-sm font-bold uppercase text-very-dark-desaturated-blue">
+        <motion.li
+          whileHover={{
+            backgroundColor: "rgb(78 223 255)",
+            color: "white",
+          }}
+          className="cursor-pointer rounded-full bg-white px-8 py-4 font-serif text-sm font-bold uppercase text-very-dark-desaturated-blue"
+        >
           <a href="#contact">Contact</a>
-        </li>
+        </motion.li>
       </ul>
-    </nav>
+    </motion.nav>
   );
 };

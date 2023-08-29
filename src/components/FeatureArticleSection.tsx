@@ -1,3 +1,17 @@
+import { Variants, motion } from "framer-motion";
+
+const variant: Variants = {
+  hidden: {
+    x: "-100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 export interface FeatureArticle {
   imageSrc: string;
   title: string;
@@ -11,7 +25,7 @@ export interface IFeatureArticleSectionProps {
 export const FeatureArticleSection = (props: IFeatureArticleSectionProps) => {
   const { featureArticles } = props;
   return (
-    <section>
+    <motion.section variants={variant} animate="visible" initial="hidden">
       {featureArticles.map((article, index) => (
         <article
           key={index}
@@ -31,17 +45,18 @@ export const FeatureArticleSection = (props: IFeatureArticleSectionProps) => {
             <p className="py-8 text-lg text-very-dark-grayish-blue lg:max-w-[450px]">
               {article.content}
             </p>
-            <a
+            <motion.a
+              whileHover={{ scale: 1.1 }}
               className={`font-serif text-base uppercase tracking-widest text-very-dark-desaturated-blue shadow-md lg:ml-[-315px] ${
                 index ? "shadow-soft-red" : "shadow-yellow"
               }`}
               href={`#${article.title}`}
             >
               Learn more
-            </a>
+            </motion.a>
           </section>
         </article>
       ))}
-    </section>
+    </motion.section>
   );
 };

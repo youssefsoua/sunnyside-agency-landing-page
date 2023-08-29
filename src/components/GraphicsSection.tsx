@@ -1,6 +1,25 @@
+import { Variants, motion } from "framer-motion";
+
+const variant: Variants = {
+  hidden: {
+    x: "-100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 1.2,
+    },
+  },
+};
+
 export const GraphicsSection = () => {
   return (
-    <section className="flex flex-col sm:flex-row">
+    <motion.section
+      variants={variant}
+      animate="visible"
+      initial="hidden"
+      className="flex flex-col sm:flex-row"
+    >
       <article className="flex min-h-[600px] w-full flex-col items-center justify-end bg-[url('/mobile/image-graphic-design.jpg')] bg-cover bg-no-repeat px-6 py-8 text-center text-dark-desaturated-cyan sm:w-1/2 xl:bg-[url('/desktop/image-graphic-design.jpg')]">
         <h2 className="font-serif text-[32px]">Graphic design</h2>
         <p className="py-8 text-sm leading-tight sm:text-base md:max-w-[336px]">
@@ -15,6 +34,6 @@ export const GraphicsSection = () => {
           photos that improve your business image.
         </p>
       </article>
-    </section>
+    </motion.section>
   );
 };
