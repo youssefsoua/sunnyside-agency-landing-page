@@ -9,7 +9,7 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed flex w-full items-center justify-between bg-navbar-blue px-6 py-7 lg:px-10">
+    <nav className="fixed flex w-full items-center justify-between bg-navbar-blue px-6 py-8 lg:px-10">
       <a href="/">
         <img src="./logo.svg" alt="SunnySide" className="h-8 w-40" />
       </a>
